@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="YUjinEDU의 공부 도구 모음" />
+    <title>YUjinEDU</title>
+    <style>
+      :root { --ink: #1d1d1f; --ink-2: #55555c; --line: #e6e3de; --bg: #fbfaf8; --surface: #fff; --accent: #0b6bcb; }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif; line-height: 1.6; word-break: keep-all; }
+      main { max-width: 720px; margin: 0 auto; padding: 64px 20px 80px; }
+      h1 { font-size: 32px; margin: 0 0 8px; letter-spacing: -0.02em; }
+      .lead { color: var(--ink-2); margin: 0 0 40px; }
+      a.card { display: block; padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; color: inherit; text-decoration: none; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04); transition: border-color 0.15s, transform 0.15s; }
+      a.card:hover { border-color: var(--accent); transform: translateY(-1px); }
+      a.card:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+      .row { display: flex; align-items: center; gap: 16px; }
+      .icon { width: 56px; height: 56px; border-radius: 14px; flex: none; }
+      h2 { font-size: 20px; margin: 0; }
+      .card p { margin: 6px 0 0; color: var(--ink-2); font-size: 15px; }
+      .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+      .tags span { font-size: 12px; padding: 2px 10px; border-radius: 999px; background: #eef4fb; color: var(--accent); font-weight: 600; }
+      .go { margin-top: 16px; font-weight: 700; color: var(--accent); }
+      footer { margin-top: 48px; font-size: 13px; color: var(--ink-2); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>YUjinEDU</h1>
+      <p class="lead">직접 만들어 쓰는 공부 도구 모음</p>
+      <a class="card" href="./toeic-voca/">
+        <div class="row">
+          <img class="icon" src="./toeic-voca/icons/icon-192.png" alt="" />
+          <div>
+            <h2>TOEIC 보카</h2>
+            <p>빈도순 토익 3,109단어를 하루 50개씩. 발음 듣기, 뜻·스펠링 퀴즈, 간격 반복 복습, 관련어 그래프.</p>
+          </div>
+        </div>
+        <div class="tags"><span>Day 1~63</span><span>신경망 발음</span><span>간격 반복(FSRS)</span><span>어원·유의어·숙어</span></div>
+        <div class="go">단어 외우러 가기 →</div>
+      </a>
+      <footer>학습 기록은 각자의 브라우저에만 저장됩니다.</footer>
+    </main>
+  </body>
+</html>
