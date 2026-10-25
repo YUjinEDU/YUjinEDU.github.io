@@ -1,4 +1,4 @@
-const CACHE = "voca-shell-v3";
+const CACHE = "voca-2bdf4e5";
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(["./", "manifest.webmanifest", "icons/icon.svg"])));
   self.skipWaiting();
@@ -15,10 +15,11 @@ self.addEventListener("fetch", (e) => {
       .then((res) => {
         if (res.ok && res.status === 200) {
           const copy = res.clone();
-          caches.open(CACHE).then((c) => c.put(e.request, copy));
+          const key = e.request.mode === "navigate" ? "./" : url.search ? url.origin + url.pathname : e.request;
+          caches.open(CACHE).then((c) => c.put(key, copy));
         }
         return res;
       })
-      .catch(() => caches.match(e.request).then((r) => r || caches.match("./"))),
+      .catch(() => caches.match(e.request, { ignoreSearch: true }).then((r) => r || caches.match("./"))),
   );
 });
