@@ -1,4 +1,4 @@
-const CACHE = "voca-b77afe71e53ace18";
+const CACHE = "voca-9c4742beccf7220f";
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(["./", "manifest.webmanifest", "icons/icon.svg"])));
   self.skipWaiting();
